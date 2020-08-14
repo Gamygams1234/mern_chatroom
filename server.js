@@ -1,9 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const connectDB = require("./config/db");
 
 const app = express();
 
+// connect Datatbase
+
+connectDB();
 app.use(bodyParser.json());
 
 const uri = require("./config/keys").mongoURI;
