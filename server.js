@@ -8,18 +8,15 @@ const app = express();
 // connect Datatbase
 
 connectDB();
-app.use(bodyParser.json());
-
-const uri = require("./config/keys").mongoURI;
 
 app.get("/", (req, res) => {
   res.send("API Running");
 });
 
-// mongoose
-//   .connect(db)
-//   .then(() => console.log("MongoDB Connected..."))
-//   .catch((err) => console.log(err));
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/profile", require("./routes/api/profile"));
+app.use("/api/posts", require("./routes/api/posts"));
+app.use("/api/auth", require("./routes/api/auth"));
 
 const port = process.env.PORT || 5000;
 
