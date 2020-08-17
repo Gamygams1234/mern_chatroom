@@ -1,6 +1,5 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+
 const connectDB = require("./config/db");
 
 const app = express();
@@ -8,6 +7,9 @@ const app = express();
 // connect Datatbase
 
 connectDB();
+
+//  init middleware
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => {
   res.send("API Running");
