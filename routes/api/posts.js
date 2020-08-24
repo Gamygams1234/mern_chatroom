@@ -191,6 +191,7 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
     const post = await Post.findById(req.params.id);
 
     // Pull out comment
+    //this wil test the comment id
     const comment = post.comments.find((comment) => comment.id === req.params.comment_id);
 
     // Make sure comment exists
@@ -204,6 +205,8 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
     }
 
     // Get remove index
+    // simalar to the likes
+
     const removeIndex = post.comments.map((comment) => comment.user.toString()).indexOf(req.user.id);
 
     post.comments.splice(removeIndex, 1);
