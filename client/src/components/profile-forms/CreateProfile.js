@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createProfile } from "../../actions/profile";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
@@ -109,7 +109,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
             <div className="form-group social-input">
               <i className="fab fa-instagram fa-2x" />
-              <input type="text" placeholder="Instagram URL" name="instagram" value={facebook} onChange={(e) => onChange(e)} />
+              <input type="text" placeholder="Instagram URL" name="instagram" value={instagram} onChange={(e) => onChange(e)} />
             </div>
           </Fragment>
         )}
