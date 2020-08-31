@@ -9,7 +9,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
     // profiles will be ran once
-  }, []);
+  }, [getProfiles]);
 
   //will show profiles if it is not loading
 
