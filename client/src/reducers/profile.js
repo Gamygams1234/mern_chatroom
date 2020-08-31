@@ -1,4 +1,4 @@
-import { GET_PROFILE, PROFILE_ERROR, CLEAR_PROFILE, UPDATE_PROFILE, GET_REPOS } from "../actions/types";
+import { GET_PROFILE, PROFILE_ERROR, CLEAR_PROFILE, UPDATE_PROFILE, GET_REPOS, GET_PROFILES } from "../actions/types";
 
 const initialState = {
   // this will hold our profile data or if we visit someone else
